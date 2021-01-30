@@ -51,8 +51,6 @@ function getTotalPrice(totalPrice) {
   document.querySelector("#vat-charge").innerText = vatChargePrice;
   const grandTotalPrice = vatChargePrice + subTotalPrice;
   document.querySelector("#grand-total").innerText = grandTotalPrice;
-
-  console.log("vat" + vatChargePrice, "grand" + grandTotalPrice);
 }
 
 /* -----------------------------------------------------------------------------------
@@ -64,21 +62,77 @@ function getInnerTextToNumber(selector) {
   return num;
 }
 
+
+/* -----------------------------------------------------------------------------------
+--------------------Form Validation and information getting funtion are here --------------------
+-------------------------------------------------------------------------------------- */
+const [
+  fromInput,
+  toInput,
+  deparatureInput,
+  returnInput,
+  firstClassSitPrice,
+  firstClassSitCount,
+  economySitPrice,
+  economyCount,
+  vatCharge,
+  totalCharge,
+] = [
+  document.querySelector("#from-input"),
+  document.querySelector("#to-input"),
+  document.querySelector("#deparature-input"),
+  document.querySelector("#return-input"),
+  document.querySelector("#first-class-sit #price"),
+  document.querySelector("#first-class-sit #count-show"),
+  document.querySelector("#economy-sit #price"),
+  document.querySelector("#economy-sit #count-show"),
+  document.querySelector("#vat-charge"),
+  document.querySelector("#grand-total"),
+];
+function getFormInfo() {
+  document.querySelector("#msg-li-1").innerText =" " + " " + " " + fromInput.value;
+  document.querySelector("#msg-li-2").innerText =" " + " " + " " + toInput.value;
+  document.querySelector("#msg-li-3").innerText = " " + " " + " " + deparatureInput.value;
+  document.querySelector("#msg-li-4").innerText =" " + " " + " " + returnInput.value;
+  document.querySelector("#msg-li-5").innerText = " " + " " + " " + firstClassSitCount.value;
+  document.querySelector("#msg-li-6").innerText =" " + " " + " " + firstClassSitPrice.innerText;
+  document.querySelector("#msg-li-7").innerText =" " + " " + " " + economyCount.value;
+  document.querySelector("#msg-li-8").innerText =" " + " " + " " + economySitPrice.innerText;
+  document.querySelector("#msg-li-9").innerText = " " + " " + " " + vatCharge.innerText;
+  document.querySelector("#msg-li-10").innerText = " " + " " + " " + totalCharge.innerText;
+}
+
 /* -----------------------------------------------------------------------------------
 --------------------Massage Handler funtion are here--------------------
+-------------------------------------------------------------------------------------
+this funtion can use any box with this parant div and cancle icon.
+just to do set parante div selector in first parameter and second parameter is cancle-icon selecotor
+------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------- */
 
-const bookNowBtn = document.querySelector('#book-now-btn');
-bookNowBtn.addEventListener('click',function(){
-  showMassage('#massage',".cancle-icon")
-})
-
-function showMassage(massageBoxSelector,cancleBtnSelector){
-const massageBox = document.querySelector(massageBoxSelector)
-const cancleBtn = document.querySelector(cancleBtnSelector);
-  massageBox.classList.add("animation-top-to-middle");
-cancleBtn.addEventListener("click", function () {
-  massageBox.classList.remove("animation-top-to-middle");
+const bookNowBtn = document.querySelector("#book-now-btn");
+bookNowBtn.addEventListener("click", function () {
+  if (
+    fromInput.value !== "" &&
+    toInput.value !== "" &&
+    deparatureInput.value !== "" &&
+    returnInput.value !== "" 
+  ) {
+    showMassage("#massage", ".cancle-icon");
+    getFormInfo();
+    
+  } else  {
+    showMassage("#massage-2", "#massage-2 .cancle-icon");
+  }
+ 
 });
 
+function showMassage(massageBoxSelector, cancleBtnSelector) {
+  const massageBox = document.querySelector(massageBoxSelector);
+  const cancleBtn = document.querySelector(cancleBtnSelector);
+  massageBox.classList.add("animation-top-to-middle");
+  cancleBtn.addEventListener("click", function () {
+    massageBox.classList.remove("animation-top-to-middle");
+  });
 }
+

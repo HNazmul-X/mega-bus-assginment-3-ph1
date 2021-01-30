@@ -45,22 +45,22 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">From</label>
-                        <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                        <input class="inp-style" id="from-input" type="text" name="" placeholder="Dhaka">
                 </div>
                 <div class="input-group">
-                    <label" for="">From</label>
-                        <input class="inp-style" type="text" name="" placeholder="Chittagone">
+                    <label" for="">To</label>
+                        <input class="inp-style" id="to-input" type="text" name="" placeholder="Chittagone">
                 </div>
             </div>
 
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                        <input class="inp-style" id="deparature-input" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" id="return-input" type="date" name="">
                 </div>
             </div>
             <div class="inputs">
@@ -90,7 +90,7 @@
 
                 <div id="economy-sit" class="input-group f-class sit-info">
                     <div>
-                        <label for="">Economy ($100 ) <button class="price-btn"> $ <span data-price="100"
+                        <label for="">Economy ($100 )<button class="price-btn">$<span data-price="100"
                                     id="price">0.00</span></button></label>
                         <input class="inp-style inp-width" id="count-show" value="0" type="number" name="">
                     </div>
@@ -141,10 +141,42 @@
         <div id="massge-area">
             <div class="massage-title">
                 <img src="images/right-correct-icon.svg" alt="">
-                <h2>Succesful !!</h2>
+                <h2 class="success-massage">Succesful !!</h2>
             </div>
             <div class="massage-content">
+                <ul>
+                    <li>Your Departure Place :<strong id="msg-li-1"></strong></li>
+                    <li>Your Destination place :<strong id="msg-li-2"></strong></li>
+                    <li>Your Journey Day :<strong id="msg-li-3"></strong></li>
+                    <li>Your Return Day :<strong id="msg-li-4"></strong></li>
+                    <li>You Book First class Sit :<strong id="msg-li-5"></strong> & cost :<strong id="msg-li-9"> </strong></li>
+                    <li>You Have Book Economy class Sit :<strong id="msg-li-6"></strong> & cost :<strong id="msg-li-10"> </strong></li>
+                    <li>your Ticket tax is :<strong id="msg-li-7"></strong></li>
+                    <li>Your Total cost is (with vat) :<strong id="msg-li-8"></strong></li>
+                </ul>
+            </div>
 
+            <button class="cancle-icon">&times;</button>
+        </div>
+
+    </div>
+    <div id="massage-2">
+        <div id="massge-area">
+            <div class="massage-title">
+                <img src="images/right-correct-icon.svg" alt="">
+                <h2 class="success-massage">Succesful !!</h2>
+            </div>
+            <div class="massage-content">
+                <ul>
+                    <li>Your Departure Place :<span id="msg-li-1"></span></li>
+                    <li>Your Destination place :<span id="msg-li-2"></span></li>
+                    <li>Your Journey Day :<span id="msg-li-3"></span></li>
+                    <li>Your Return Day :<span id="msg-li-4"></span></li>
+                    <li>You Book First class Sit :<span id="msg-li-5"></span> & cost :<span id="msg-li-9"> </span></li>
+                    <li>You Have Book Economy class Sit :<span id="msg-li-6"></span> & cost :<span id="msg-li-10"> </span></li>
+                    <li>your Ticket tax is :<span id="msg-li-7"></span></li>
+                    <li>Your Total cost is (with vat) :<span id="msg-li-8"></span></li>
+                </ul>
             </div>
 
             <button class="cancle-icon">&times;</button>
