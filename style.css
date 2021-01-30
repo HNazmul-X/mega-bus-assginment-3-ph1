@@ -12,7 +12,7 @@ button:focus , input:focus{
 body{
     font-family: 'Roboto', sans-serif;
     background-repeat: no-repeat;
-    background:url("images/bus.png");
+    background:url("images/bus.jpeg");
     background-color: #555555;
     background-blend-mode: soft-light;
     background-position: center center;
