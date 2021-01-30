@@ -95,11 +95,11 @@ function getFormInfo() {
   document.querySelector("#msg-li-3").innerText = " " + " " + " " + deparatureInput.value;
   document.querySelector("#msg-li-4").innerText =" " + " " + " " + returnInput.value;
   document.querySelector("#msg-li-5").innerText = " " + " " + " " + firstClassSitCount.value;
-  document.querySelector("#msg-li-6").innerText =" " + " " + " " + firstClassSitPrice.innerText;
-  document.querySelector("#msg-li-7").innerText =" " + " " + " " + economyCount.value;
-  document.querySelector("#msg-li-8").innerText =" " + " " + " " + economySitPrice.innerText;
-  document.querySelector("#msg-li-9").innerText = " " + " " + " " + vatCharge.innerText;
-  document.querySelector("#msg-li-10").innerText = " " + " " + " " + totalCharge.innerText;
+  document.querySelector("#msg-li-6").innerText =" " + " " + " " +  economyCount.value;
+  document.querySelector("#msg-li-7").innerText =" " + " " + " $" + vatCharge.innerText;;
+  document.querySelector("#msg-li-8").innerText =" " + " " + " $" + totalCharge.innerText ;
+  document.querySelector("#msg-li-9").innerText = " " + " " + " $" + firstClassSitPrice.innerText;
+  document.querySelector("#msg-li-10").innerText = " " + " " + " $" + economySitPrice.innerText;;
 }
 
 /* -----------------------------------------------------------------------------------
@@ -118,9 +118,13 @@ bookNowBtn.addEventListener("click", function () {
     deparatureInput.value !== "" &&
     returnInput.value !== "" 
   ) {
-    showMassage("#massage", ".cancle-icon");
-    getFormInfo();
-    
+        if (firstClassSitCount.value > 0 || economyCount.value > 0) {
+          showMassage("#massage", ".cancle-icon");
+          getFormInfo();
+        } 
+        else{
+          showMassage("#massage-2", "#massage-2 .cancle-icon");
+        }
   } else  {
     showMassage("#massage-2", "#massage-2 .cancle-icon");
   }

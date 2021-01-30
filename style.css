@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -49,6 +50,7 @@ nav ul li a:hover, a.active{
     gap: 70px;
     align-items: center;
 }
+
 .booking-content{
     color: #fff;
     width: 100%;
@@ -163,19 +165,23 @@ nav ul li a:hover, a.active{
     padding:20px;
     background:white;
     position: fixed;
-    top:-400px;
+    top:-700px;
     left:50%;
     transform: translateX(-50%);
     margin: auto;
-    box-shadow: 0 2px 4.4px rgba(0, 0, 0, 0.017),
-    0 6.6px 10.5px rgba(0, 0, 0, 0.024),
-    0 14.3px 19.8px rgba(0, 0, 0, 0.03),
-    0 26.5px 35.3px rgba(0, 0, 0, 0.036),
-    0 46.5px 66px rgba(0, 0, 0, 0.043),
-    0 100px 158px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09),
+    0 4px 2px rgba(0, 0, 0, 0.09),
+    0 8px 4px rgba(0, 0, 0, 0.09),
+    0 16px 8px rgba(0, 0, 0, 0.09),
+    0 32px 16px rgba(0, 0, 0, 0.09);
+}
+#massage-2 {
+    color:red;
+    text-align: center;
 }
 .massage-title{
     width:100%;
+    margin-bottom: 10px;
 }
 .massge-area{
     position: relative;
@@ -183,6 +189,7 @@ nav ul li a:hover, a.active{
 .massage-title img{
     width:35%;
     margin:auto;
+    margin-bottom: 10px;
     display:inherit;
 
 }
@@ -212,7 +219,7 @@ nav ul li a:hover, a.active{
     color:#ff0000;
 }
 .animation-top-to-middle{
-    animation: top-to-bottom 1s ease-in-out forwards;
+    animation: top-to-bottom 1s ease-in forwards;
 }
 @keyframes top-to-bottom{
     0%{
@@ -220,6 +227,34 @@ nav ul li a:hover, a.active{
 
     }
     100%{
-        top:120px;
+        top:70px;
+    }
+}
+@media screen and (max-width:500px) {
+    .container{
+        max-width: 100%;
+    }
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form {
+        margin: 20px auto;
+        width:100%;
+    }
+    .booking-content{
+        margin:0px;
+        padding:20px;
+    }
+    .inputs label{
+        font-size:15px;
+    }
+    .plus-minus-btn{
+        padding-top:41px;
+    }
+    nav ul li a{
+        font-size:13px;
+        padding:7px;
+        margin-left: 0px;
     }
 }
