@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+button:focus , input:focus{
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    background:url("images/bus.png");
+    background-color: #555555;
+    background-blend-mode: soft-light;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    padding: 20px 0;
+}
+.container{
+    width: 1200px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 6px;
+}
+nav ul li a{
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+nav ul li a:hover, a.active{
+    background-color: #52AF3A;
+    border-radius: 5px;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 70px;
+    align-items: center;
+}
+.booking-content{
+    color: #fff;
+    width: 100%;
+    float: left;
+    margin-left: 50px;
+}
+.booking-content h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+.booking-form{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+    width: 80%;
+    margin: 50px 0px 020px 80px;
+}
+.booking-form h3{
+    margin: 10px 0px;
+}
+.booking-form  .input-group{
+    margin: 10px 0;
+}
+.booking-form  .calculations{
+    margin: 10px 0;
+}
+.booking-form  .calculations p{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.booking-form input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #F3F5FF;
+    border-radius: 4px;
+    margin: 10px 0;
+    background: #e6e6e6;
+}
+.booking-form .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.f-class{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.inp-width{
+    min-width: 100px;
+}
+.plus-minus-btn{
+    color: #3352F2;
+    font-size: 30px;
+    padding: 2px;
+    padding-top:23px;
+    padding-left:7px;
+}
+.btn-style{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color:  #52AF3A;
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+}
+#plus-counter,
+#minus-counter {
+    width: 48px;
+    text-align: center;
+    border: 1px solid white;
+    color: dimgray;
+    border-radius: 5px;
+    line-height: 0.7;
+    background: #e6e6e6;
+    cursor: pointer;
+    padding:5px;
+    box-sizing: border-box;
+    font-size:20px;
+    transition: 0.3s;
+}
+#plus-counter:hover,
+#minus-counter:hover{
+    background:#555555;
+    color:white;
+}
+
+.price-btn{
+        padding: 2px ;
+        font-size:12px;
+        color: dimgray;
+        transform: translateX(5px);
+        border-radius: 9px;
+        border: 1px solid dimgray;
+}
+#massage{
+    width:350px;
+    min-height: 150px;
+    background:white;
+    position: fixed;
+    top:-400px;
+    left:50%;
+    transform: translateX(-50%);
+    margin: auto;
+    box-shadow: 0 2px 4.4px rgba(0, 0, 0, 0.017),
+    0 6.6px 10.5px rgba(0, 0, 0, 0.024),
+    0 14.3px 19.8px rgba(0, 0, 0, 0.03),
+    0 26.5px 35.3px rgba(0, 0, 0, 0.036),
+    0 46.5px 66px rgba(0, 0, 0, 0.043),
+    0 100px 158px rgba(0, 0, 0, 0.06);
+}
+.massage-title{
+    width:100%;
+    padding:20px;
+}
+.massge-area{
+    position: relative;
+}
+.massage-title img{
+    width:35%;
+    margin:auto;
+    display:inherit;
+
+}
+.massage-title h2{
+    color:#41AD49;
+    text-align:center;
+}
+.cancle-icon{
+    position: absolute;
+    z-index: 1;
+    top:5px;
+    font-size:25px;
+    background:none;
+    border:none;
+    right:5px;
+    color:red;
+}
+.animation-top-to-middle{
+    animation: top-to-bottom 1s ease-in-out forwards;
+}
+@keyframes top-to-bottom{
+    0%{
+        top:0px;
+
+    }
+    100%{
+        top:120px;
+    }
+}
